@@ -14,6 +14,10 @@ config/name="SpaceGunPlatform"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://bscyyhx8bg0qd"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
