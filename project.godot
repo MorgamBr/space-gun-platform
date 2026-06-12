@@ -18,6 +18,16 @@ config/icon="res://icon.svg"
 
 Global="*uid://bscyyhx8bg0qd"
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="PlayerProjectiles"
+2d_physics/layer_3="Enemy"
+2d_physics/layer_4="EnemyProjectiles"
+2d_physics/layer_7="Ground"
+2d_physics/layer_8="Platform"
+2d_physics/layer_9="Hazards"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
