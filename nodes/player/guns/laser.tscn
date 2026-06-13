@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dhiaetwa8iyf6"]
+
+[ext_resource type="Script" uid="uid://r07hb0ehq88f" path="res://nodes/player/guns/laser.gd" id="1_2or5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yqrg"]
+resource_local_to_scene = true
+size = Vector2(40, 16)
+
+[node name="Laser" type="Area2D" unique_id=157094328 node_paths=PackedStringArray("collision_shape", "sprite")]
+script = ExtResource("1_2or5v")
+collision_shape = NodePath("CollisionShape2D")
+sprite = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474408657]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_8yqrg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=109382322]
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 8.0
+color = Color(0.18039216, 1, 1, 1)
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=152554102]
+target_position = Vector2(1200, 0)
+collision_mask = 452
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

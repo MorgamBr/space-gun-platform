@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bs5nb7v3xut3h"]
+
+[ext_resource type="PackedScene" uid="uid://c4skxfi6fo21w" path="res://nodes/player/player.tscn" id="1_nlbtt"]
+[ext_resource type="Texture2D" uid="uid://cqm784hhnbc52" path="res://icon.svg" id="2_a7xco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3bga"]
+size = Vector2(1152, 48)
+
+[node name="TestSceneMorgana" type="Node2D" unique_id=21818177]
+
+[node name="Player" parent="." unique_id=292901759 instance=ExtResource("1_nlbtt")]
+position = Vector2(576, 520)
+bullet_damage = null
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1683725589]
+position = Vector2(576, 624)
+collision_layer = 64
+collision_mask = 271
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=279603607]
+scale = Vector2(9, 0.375)
+texture = ExtResource("2_a7xco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=942817641]
+shape = SubResource("RectangleShape2D_q3bga")
